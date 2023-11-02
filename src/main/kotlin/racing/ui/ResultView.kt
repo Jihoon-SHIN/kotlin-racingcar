@@ -4,7 +4,7 @@ import racing.car.Cars
 
 typealias ResultViewAction = (Cars) -> Unit
 class ResultView {
-    fun resultViewWithoutName(carsList: MutableList<Cars>) {
+    fun resultViewWithoutName(carsList: List<Cars>) {
         carsList.forEach { cars ->
             makeResultView(cars)
         }
@@ -19,12 +19,12 @@ class ResultView {
         println()
     }
 
-    fun resultViewWithWinner(carsList: MutableList<Cars>) {
+    fun resultViewWithWinner(carsList: List<Cars>) {
         resultViewWithName(carsList)
         makeWinnerView(carsList.last())
     }
 
-    private fun resultViewWithName(carsList: MutableList<Cars>) {
+    private fun resultViewWithName(carsList: List<Cars>) {
         carsList.forEach { cars ->
             makeResultViewWithName(cars)
         }

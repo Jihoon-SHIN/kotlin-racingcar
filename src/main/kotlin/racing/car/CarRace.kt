@@ -3,7 +3,7 @@ package racing.car
 import racing.moveprovider.RandomMoveProvider
 
 class CarRace {
-    fun start(cars: Cars, tryNumber: Int, moveProvider: RandomMoveProvider): MutableList<Cars> {
+    fun start(cars: Cars, tryNumber: Int, moveProvider: RandomMoveProvider): List<Cars> {
         val roundsResults = mutableListOf<Cars>()
         repeat(tryNumber) {
             cars.moveAll(moveProvider)

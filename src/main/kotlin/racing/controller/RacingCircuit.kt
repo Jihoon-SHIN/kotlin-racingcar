@@ -16,7 +16,7 @@ class RacingCircuit {
         val cars = Cars(carNumber)
 
         println("레이스 스타트")
-        val roundCars: MutableList<Cars> = carRace.start(cars, tryNumber, RandomMoveProvider())
+        val roundCars: List<Cars> = carRace.start(cars, tryNumber, RandomMoveProvider())
         resultView.resultViewWithoutName(roundCars)
     }
 
@@ -29,7 +29,7 @@ class RacingCircuit {
         val cars = Cars(carList)
 
         println("실행 결과")
-        val roundCars: MutableList<Cars> = carRace.start(cars, tryNumber, RandomMoveProvider())
+        val roundCars: List<Cars> = carRace.start(cars, tryNumber, RandomMoveProvider())
         resultView.resultViewWithWinner(roundCars)
     }
 }
